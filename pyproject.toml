@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aviation"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+  { name = "Jorge", email = "jorgecardleitao@gmail.com" },
+]
+dependencies = [
+  "requests",
+  "duckdb"
+]
+
+[tool.hatch.version]
+path = "src/aviation/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/aviation tests}"
