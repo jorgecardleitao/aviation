@@ -44,6 +44,7 @@ TABLES = {
     "by_airline": "by_airline.sql",
     "by_airlinecountry": "by_airlinecountry.sql",
     "by_aircrafttype": "by_aircrafttype.sql",
+    "total": "total.sql",
 }
 
 

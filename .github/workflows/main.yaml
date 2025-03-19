@@ -1,8 +1,10 @@
+name: Analysis
+
 on: [push]
 
 jobs:
-  build:
-    name: Build
+  test:
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +19,8 @@ jobs:
           KEY: ${{ secrets.KEY }}
 
   run:
-    name: Run
+    name: Run analysis
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
