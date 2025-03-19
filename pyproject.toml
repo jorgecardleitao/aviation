@@ -26,3 +26,10 @@ extra-dependencies = [
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/aviation tests}"
+
+[tool.hatch.envs.tests]
+extra-dependencies = [
+  "pytest",
+]
+[tool.hatch.envs.tests.scripts]
+run = "pytest {args:}"
