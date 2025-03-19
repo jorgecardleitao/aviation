@@ -2,15 +2,39 @@ on: [push]
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install Hatch
-      uses: pypa/hatch@install
+      - name: Install Hatch
+        uses: pypa/hatch@install
 
-    - name: Run tests
-      run: hatch run tests:run
-      env:
-        KEY: ${{ secrets.KEY }}
+      - name: Run tests
+        run: hatch run tests:run
+        env:
+          KEY: ${{ secrets.KEY }}
+
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Hatch
+        uses: pypa/hatch@install
+
+      - name: Run tests
+        run: hatch run python src/aviation/main.py
+        env:
+          KEY: ${{ secrets.KEY }}
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          path: results
+          name: results
+          if-no-files-found: error
+          overwrite: true

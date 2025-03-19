@@ -40,13 +40,28 @@ def ensure_data():
     _unzip(path, "data/flight_emission_data_2025-01-17")
 
 
+TABLES = {
+    "by_airline": "by_airline.sql",
+    "by_airlinecountry": "by_airlinecountry.sql",
+    "by_aircrafttype": "by_aircrafttype.sql",
+}
+
+
 def main():
     ensure_data()
 
-    with open(sys.argv[1], "r") as f:
-        sql = f.read()
+    os.makedirs("results/", exist_ok=True)
 
-    duckdb.sql(sql).show(max_rows=100)
+    for table, sql in TABLES.items():
+        with open(f"src/aviation/sql/{sql}") as f:
+            sql = f.read()
+        print(f"Processing {table}")
+        sql = f"""
+COPY (
+{sql}
+) TO 'results/{table}.csv' (HEADER, DELIMITER ',');
+"""
+        duckdb.sql(sql)
 
 
 if __name__ == "__main__":
