@@ -33,11 +33,15 @@ def _unzip(source: str, target: str):
         zip_ref.extractall(target)
 
 
-def main():
+def ensure_data():
     URL = f"https://files.atmosfair.de/index.php/s/{os.environ['KEY']}/download/flight_emission_data_2025-01-17.zip"
     os.makedirs("data/", exist_ok=True)
     path = _download_file(URL, "data/")
     _unzip(path, "data/flight_emission_data_2025-01-17")
+
+
+def main():
+    ensure_data()
 
     with open(sys.argv[1], "r") as f:
         sql = f.read()

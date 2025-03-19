@@ -1,4 +1,7 @@
 import duckdb
+import pytest
+
+import aviation.main
 
 
 ROUTES = """
@@ -8,7 +11,12 @@ SELECT * FROM read_csv_auto('data/flight_emission_data_2025-01-17/emissionV22_20
 """
 
 
-def test_global_emissions():
+@pytest.fixture(scope='session', autouse=True)
+def data():
+    aviation.main.ensure_data()
+
+
+def test_global_emissions(data):
     # test that computed emissions are within 5% of the actual value
     total_emissions = f"""
 {ROUTES}
@@ -24,7 +32,7 @@ FROM routes
     assert abs(result - expected) / expected < 0.07
 
 
-def test_passagers_within_count():
+def test_passagers_within_count(data):
     sql = f"""
 {ROUTES}
 SELECT 
@@ -36,7 +44,7 @@ FROM routes
     assert passengers < seats
 
 
-def test_uniqueness():
+def test_uniqueness(data):
     sql = f"""
 {ROUTES}
 SELECT 
@@ -50,7 +58,7 @@ FROM routes
     assert count == unique_routes
 
 
-def test_average_load():
+def test_average_load(data):
     query = f"""
     {ROUTES}
     SELECT
