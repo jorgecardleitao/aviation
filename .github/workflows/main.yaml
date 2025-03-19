@@ -7,6 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install Hatch
+      uses: pypa/hatch@install
+
     - name: Run tests
       run: hatch run tests:run
       env:
