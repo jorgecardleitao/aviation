@@ -8,12 +8,16 @@ Once you have it, you can run this code as shown below.
 pip install hatch
 
 export KEY=Yp...s
-hatch run default:python src/aviation/main.py src/aviation/sql/unique_invariants.sql
+hatch run default:python src/aviation/main.py
 ```
 
-NOTE: this will download the data to locally, under `data/`. This directory is ignored by git.
+NOTE: this will download the data to locally, under `data/` and output the results to directory `results`.
+Both directories are git ignored.
 
 ## Run data checks
+
+This repository contains a set of queries to assert data invariants, including invariants related to its comparison with
+data observed by international organizations and airlines.
 
 ```bash
 hatch run tests:run

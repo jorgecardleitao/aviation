@@ -1,6 +1,5 @@
 import os
 import zipfile
-import sys
 
 import requests
 import duckdb
