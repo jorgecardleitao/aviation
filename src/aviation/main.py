@@ -1,5 +1,6 @@
 import os
 import zipfile
+import sys
 
 import requests
 import duckdb
@@ -44,11 +45,20 @@ TABLES = {
     "by_airlinecountry": "by_airlinecountry.sql",
     "by_aircrafttype": "by_aircrafttype.sql",
     "total": "total.sql",
+    "by_route": "by_route.sql",
 }
 
 
 def main():
     ensure_data()
+
+    # to run a single SQL, for testing
+    sql = sys.argv[1] if len(sys.argv) > 1 else None
+    if sql:
+        with open(f"src/aviation/sql/{sql}") as f:
+            sql = f.read()
+        print(duckdb.sql(sql).fetchall())
+        exit(0)
 
     os.makedirs("results/", exist_ok=True)
 
