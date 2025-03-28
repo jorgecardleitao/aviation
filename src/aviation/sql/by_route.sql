@@ -18,12 +18,13 @@ SELECT
     COUNT(DISTINCT airlinename) AS airlines,
     SUM(emissionflightinfo_flightdistancekm * frequency) / SUM(frequency) AS avg_distance,
     SUM(emissionflightinfo_flightdistancekm * frequency) AS flown_distance,
+    SUM(emissionflightinfo_greatcircledistancekm * frequency) AS gcd,
     SUM(frequency) AS flights,
     SUM(emissionflightinfo_passengerloadfactor * seatcount * frequency) AS passengers,
     SUM(seatcount * frequency) AS seats,
     SUM(emissionflightinfo_passengerloadfactor * frequency) / SUM(frequency) AS average_load,
     SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency * emissionflightinfo_passengerloadfactor * seatcount) AS co2,
-    SUM(values_averageclass_co2withoutrfiperpassengerintons) / SUM(emissionflightinfo_flightdistancekm * frequency) AS co2_pax_km,
+    SUM(values_averageclass_co2withoutrfiperpassengerintons) / SUM(emissionflightinfo_greatcircledistancekm * frequency) AS co2_pax_km,
 FROM routes
 GROUP BY departure, arrival
 ORDER BY passengers DESC
