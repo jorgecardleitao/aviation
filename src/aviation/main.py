@@ -46,6 +46,7 @@ TABLES = {
     "by_aircrafttype": "by_aircrafttype.sql",
     "total": "total.sql",
     "by_route": "by_route.sql",
+    "by_route_airline": "by_route_airline.sql",
 }
 
 

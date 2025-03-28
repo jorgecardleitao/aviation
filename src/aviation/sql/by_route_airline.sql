@@ -15,7 +15,6 @@ SELECT
     emissionflightinfo_departureiatacode as departure,
     emissionflightinfo_arrivaliatacode as arrival,
     COUNT(DISTINCT aircraftiatacode) AS aircraft_types,
-    COUNT(DISTINCT airlinename) AS airlines,
     SUM(emissionflightinfo_flightdistancekm * frequency) / SUM(frequency) AS avg_distance,
     SUM(emissionflightinfo_flightdistancekm * frequency) AS flown_distance,
     SUM(frequency) AS flights,
@@ -25,5 +24,5 @@ SELECT
     SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency * emissionflightinfo_passengerloadfactor * seatcount) AS co2,
     SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency * emissionflightinfo_passengerloadfactor * seatcount) / SUM(emissionflightinfo_passengerloadfactor * seatcount * frequency) / SUM(emissionflightinfo_flightdistancekm * frequency) AS co2_pax_km,
 FROM routes
-GROUP BY departure, arrival
-ORDER BY passengers DESC
+GROUP BY departure, arrival, airlinename
+ORDER BY co2_pax_km ASC

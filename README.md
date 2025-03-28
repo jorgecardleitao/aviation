@@ -25,9 +25,8 @@ hatch run tests:run
 
 ## Available queries
 
-- [by airline](./src/aviation/sql/by_airline.sql)
-- [by country of airline](./src/aviation/sql/by_airlinecountry.sql)
-- [totals](./src/aviation/sql/total.sql)
+You can find the list of queries in directory [`src/aviation/sql/`](./src/aviation/sql/).
+Each of these queries is executed on GitHub's CI/CD and the results are available as artifacts in the job run.
 
 ## Raw data specification
 
