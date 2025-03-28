@@ -14,6 +14,7 @@ WITH airlines AS (
 SELECT
     emissionflightinfo_departureiatacode as departure,
     emissionflightinfo_arrivaliatacode as arrival,
+    airlinename,
     COUNT(DISTINCT aircraftiatacode) AS aircraft_types,
     SUM(emissionflightinfo_flightdistancekm * frequency) / SUM(frequency) AS avg_distance,
     SUM(emissionflightinfo_flightdistancekm * frequency) AS flown_distance,
@@ -29,4 +30,4 @@ SELECT
     AS gco2_pax_km,
 FROM routes
 GROUP BY departure, arrival, airlinename
-ORDER BY gco2_pax_km
+ORDER BY passengers DESC

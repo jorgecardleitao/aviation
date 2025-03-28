@@ -27,4 +27,4 @@ SELECT
     AS gco2_pax_km,
 FROM routes
 GROUP BY airlinename
-ORDER BY gco2_pax_km
+ORDER BY passengers DESC

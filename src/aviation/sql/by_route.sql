@@ -30,4 +30,4 @@ SELECT
     AS gco2_pax_km,
 FROM routes
 GROUP BY departure, arrival
-ORDER BY gco2_pax_km
+ORDER BY passengers DESC

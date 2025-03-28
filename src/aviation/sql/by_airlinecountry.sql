@@ -34,4 +34,4 @@ SELECT
     AS gco2_pax_km,
 FROM with_country
 GROUP BY country
-ORDER BY gco2_pax_km
+ORDER BY passengers DESC
