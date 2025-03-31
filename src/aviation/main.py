@@ -40,16 +40,6 @@ def ensure_data():
     _unzip(path, "data/flight_emission_data_2025-01-17")
 
 
-TABLES = {
-    "by_airline": "by_airline.sql",
-    "by_airlinecountry": "by_airlinecountry.sql",
-    "by_aircrafttype": "by_aircrafttype.sql",
-    "total": "total.sql",
-    "by_route": "by_route.sql",
-    "by_route_airline": "by_route_airline.sql",
-}
-
-
 def main():
     ensure_data()
 
@@ -63,8 +53,13 @@ def main():
 
     os.makedirs("results/", exist_ok=True)
 
-    for table, sql in TABLES.items():
-        with open(f"src/aviation/sql/{sql}") as f:
+    from os import listdir
+    from os.path import isfile, join
+    sqls = [f"src/aviation/sql/{f}" for f in listdir("src/aviation/sql/") if isfile(join("src/aviation/sql/", f))]
+
+    for sql in sqls:
+        table = sql.split("/")[-1].split(".sql")[0]
+        with open(sql) as f:
             sql = f.read()
         print(f"Processing {table}")
         sql = f"""
