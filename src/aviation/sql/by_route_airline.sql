@@ -25,7 +25,7 @@ SELECT
     SUM(emissionflightinfo_passengerloadfactor * frequency) / SUM(frequency) AS average_load,
     SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency * emissionflightinfo_passengerloadfactor * seatcount) AS co2,
     SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency)
-        / SUM(emissionflightinfo_greatcircledistancekm * frequency)
+        / SUM(emissionflightinfo_flightdistancekm * frequency)
         * 1000 * 1000
     AS gco2_pax_km,
 FROM routes
