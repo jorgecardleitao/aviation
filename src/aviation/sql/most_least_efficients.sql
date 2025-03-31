@@ -16,8 +16,8 @@ WITH airlines AS (
         emissionflightinfo_departureiatacode as departure,
         emissionflightinfo_arrivaliatacode as arrival,
         airlinename,
-        SUM(values_averageclass_co2withoutrfiperpassengerintons * frequency)
-            / SUM(emissionflightinfo_flightdistancekm * frequency)
+        SUM(values_averageclass_co2withoutrfiperpassengerintons / emissionflightinfo_flightdistancekm * frequency)
+            / SUM(frequency)
             * 1000 * 1000
         AS gco2_pax_km,
     FROM routes, airports as airports_a, airports as airports_d
