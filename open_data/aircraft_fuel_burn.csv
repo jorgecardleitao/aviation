@@ -1,0 +1,117 @@
+IATA code,Aircraft name,Average Fuel Burn [kg/hour]
+100,Fokker 100,2000.0
+142,BAe 146-200 Passenger,2200.0
+146,BAe 146 Passenger,2500.0
+221,Airbus A220-100 Passenger,1700.0
+223,Airbus A220-300 Passenger,1800.0
+290,Embraer 190 E2,1600.0
+295,Embraer 195 E2,1700.0
+310,Airbus A310 Passenger,4500.0
+313,Airbus A310-300 Passenger,4500.0
+318,Airbus A318,2400.0
+319,Airbus A319,2500.0
+31N,Airbus A319neo,2100.0
+320,Airbus A320,2600.0
+321,Airbus A321,2900.0
+32A,Airbus A320 (sharklets),2500.0
+32B,Airbus A321 (Sharklets),2800.0
+32N,Airbus A320neo,2200.0
+32Q,Airbus A321neo,2500.0
+32S,Airbus A318/319/320/321,2550.0
+330,Airbus A330,5800.0
+332,Airbus A330-200,5700.0
+333,Airbus A330-300,6000.0
+338,Airbus A330-800neo,5500.0
+339,Airbus A330-900neo,5800.0
+340,Airbus A340,7500.0
+343,Airbus A340-300,7200.0
+346,Airbus A340-600,8500.0
+350,Airbus A350,5400.0
+351,Airbus A350-1000,6200.0
+359,Airbus A350-900,5600.0
+388,Airbus A380-800 Passenger,11000.0
+717,Boeing 717-200,2100.0
+732,Boeing 737-200 /200C Advanced (Pax),2200.0
+733,Boeing 737-300 Passenger,2300.0
+734,Boeing 737-400 Passenger,2350.0
+735,Boeing 737-500 Passenger,2100.0
+736,Boeing 737-600 Passenger,2300.0
+737,Boeing 737 Passenger,2400.0
+738,Boeing 737-800 Passenger,2600.0
+739,Boeing 737-900 Passenger,2700.0
+73C,Boeing 737-300 (winglets) Passenger,2250.0
+73E,Boeing 737-500 (winglets) Passenger,2050.0
+73G,Boeing 737-700 Passenger,2400.0
+73H,Boeing 737-800 (winglets) Passenger,2500.0
+73J,Boeing 737-900 (winglets) Passenger,2600.0
+73W,Boeing 737-700 (winglets) Passenger,2300.0
+744,Boeing 747-400 (Passenger),10500.0
+747,Boeing 747 (Passenger),10000.0
+74H,Boeing 747-8 Passenger,11200.0
+752,Boeing 757-200 Passenger,3200.0
+753,Boeing 757-300 Passenger,3400.0
+757,Boeing 757 (Passenger),3200.0
+75T,Boeing 757-300 (winglets) Passenger,3300.0
+75W,Boeing 757-200 (winglets) Passenger,3100.0
+762,Boeing 767-200 Passenger,4800.0
+763,Boeing 767-300 Passenger,5200.0
+764,Boeing 767-400 Passenger,5500.0
+767,Boeing 767 Passenger,5200.0
+76W,Boeing 767-300 (winglets) Passenger,5100.0
+772,Boeing 777-200/200ER Passenger,6700.0
+773,Boeing 777-300 Passenger,6900.0
+777,Boeing 777 Passenger,6800.0
+77L,Boeing 777-200LR,6800.0
+77W,Boeing 777-300ER Passenger,7000.0
+781,Boeing 787-10,5500.0
+787,Boeing 787,5200.0
+788,Boeing 787-8,5000.0
+789,Boeing 787-9,5300.0
+7M7,Boeing 737MAX 7 Passenger,2200.0
+7M8,Boeing 737MAX 8 Passenger,2300.0
+7M9,Boeing 737MAX 9 Passenger,2400.0
+7S8,Boeing 737-800 (Scimitar Winglets) Pax,2550.0
+AB4,Airbus A300B2 /B4 Passenger,4200.0
+AB6,Airbus A300-600 Passenger,4400.0
+AR8,Avro RJ85,1800.0
+AT4,ATR 42-300 /320,650.0
+AT7,ATR 72,800.0
+ATR,ATR42 /ATR72,700.0
+C27,Comac ARJ21-700,1600.0
+CR1,Canadair Regional Jet 100,1100.0
+CR2,Canadair Regional Jet 200,1200.0
+CR7,Canadair Regional Jet 700,1500.0
+CR9,Canadair Regional Jet 900,1600.0
+CRJ,Canadair Regional Jet,1400.0
+CRK,Canadair (Bombardier) Regional Jet 1000,1700.0
+D38,Fairchild Dornier 328-100,600.0
+DC9,Boeing (douglas) DC-9 Passenger,2400.0
+DH1,DHvilld-Bombardier DHC8-100 Dsh 8/8Q,450.0
+DH2,DHvilld-Bombardier DHC8-200 Dsh 8/8Q,500.0
+DH3,DHvilld-Bombardier DHC8-300 Dsh 8/8Q,550.0
+DH4,DHvilld-Bombardier DHC8 Dsh 8-400/8Q,700.0
+DH8,DHvilld-Bombardier DHC8 Dsh 8,600.0
+E70,Embraer 170,1400.0
+E75,Embraer 175,1500.0
+E7W,Embraer 175 (Enhanced Winglets),1480.0
+E90,Embraer 190,1700.0
+E95,Embraer 195,1800.0
+EM2,Embraer 120 Brasilia,600.0
+EMJ,Embraer 170/195,1600.0
+EP3,Embraer EMB-505 Phenom 300,350.0
+ER3,Embraer RJ135,900.0
+ER4,Embraer RJ145,1000.0
+ERD,Embraer RJ140,950.0
+ERJ,Embraer RJ 135/140/145,950.0
+F50,Fokker 50,1200.0
+F70,Fokker 70,1600.0
+FRJ,Fairchild Dornier 328-100,600.0
+J41,BAe Jetstream 41,650.0
+M82,Boeing (douglas) MD-82,2800.0
+M83,Boeing (douglas) MD-83,2900.0
+M88,Boeing (douglas) MD-88,2850.0
+S20,Saab 2000,700.0
+SF3,Saab 340,600.0
+SFB,Saab 340B,620.0
+SU9,Sukhoi Superjet 100-95,1800.0
+YK2,Yakovlev Yak-42 /142,2200.0
