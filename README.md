@@ -1,6 +1,14 @@
-# aviation
+# Air transport efficiency
 
-This repository contains Python code to analyze route aviation data.
+This repository contains Python code to analyze and visualize route aviation data underlying
+
+> Gössling, S, M Klöwer, JC Leitão, S Hirsch, D Brockenhagen, A Humpe, 2025. _Large emission avoidance potential in improved commercial air transport efficiency_, **Nature Communications Earth & Environment**, accepted.
+
+Notebooks and plots are found in [/plots](https://github.com/jorgecardleitao/aviation/tree/main/plots),
+data postprocessing is in [/src/aviation](https://github.com/jorgecardleitao/aviation/tree/main/src/aviation).
+
+## Data
+
 You need access to a secret key to access the raw data, see below.
 Once you have it, you can run this code as shown below.
 
