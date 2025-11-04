@@ -1,5 +1,7 @@
 # Air transport efficiency
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17525493.svg)](https://doi.org/10.5281/zenodo.17525493)
+
 This repository contains Python code to analyze and visualize route aviation data underlying
 
 > Gössling, S, M Klöwer, JC Leitão, S Hirsch, D Brockenhagen, A Humpe, 2025. _Large emission avoidance potential in improved commercial air transport efficiency_, **Nature Communications Earth & Environment**, accepted.
