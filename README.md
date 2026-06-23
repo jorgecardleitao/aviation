@@ -4,7 +4,7 @@
 
 This repository contains Python code to analyze and visualize route aviation data underlying
 
-> Gössling, S, M Klöwer, JC Leitão, S Hirsch, D Brockenhagen, A Humpe, 2025. _Large emission avoidance potential in improved commercial air transport efficiency_, **Nature Communications Earth & Environment**, accepted.
+> Gössling, S, M Klöwer, JC Leitão, S Hirsch, D Brockenhagen, A Humpe, 2025. _Large emission avoidance potential in improved commercial air transport efficiency_, **Nature Communications Earth & Environment**, 7, 13 (2026). DOI:[10.1038/s43247-025-03069-4](https://doi.org/10.1038/s43247-025-03069-4)
 
 Notebooks and plots are found in [/plots](https://github.com/jorgecardleitao/aviation/tree/main/plots),
 data postprocessing is in [/src/aviation](https://github.com/jorgecardleitao/aviation/tree/main/src/aviation).
